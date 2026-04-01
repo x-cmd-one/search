@@ -1,4 +1,4 @@
-name: release
+name: idx-cn
 on:
   workflow_dispatch:
   # schedule:
