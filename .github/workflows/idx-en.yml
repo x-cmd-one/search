@@ -1,0 +1,25 @@
+name: idx-en
+on:
+  workflow_dispatch:
+  # schedule:
+    # - cron: '00 7 * * *'  # 15
+    # - cron: '00 10 * * *'
+    # - cron: '30 10 * * *'
+    # - cron: '00 14 * * *'
+  
+
+jobs:
+  Bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      CONCURRENCY: 10
+      # ___X_CMD_GHACTION_X: x7
+      github_token: ${{ secrets.X_GITHUB_TOKEN }}
+      git_user: agent-zero
+      git_email: 0@x-cmd.com
+    steps:
+      - name: main
+        uses: x-cmd/action@v0
+        with:
+          code: x ws idx-en || true
